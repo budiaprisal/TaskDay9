@@ -1,0 +1,22 @@
+{
+  "name": "taskday9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "budi aprisal",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.18.1",
+    "g": "^2.0.1",
+    "hbs": "^4.2.0",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "description": ""
+}

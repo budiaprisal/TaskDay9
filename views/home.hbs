@@ -1,0 +1,149 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example bd-example-row">
+
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/assets/images/logo.png" alt="logo" />
+          </a>
+
+          <!--hamburger menu-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--hamburger menu-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link page navigation example text-orange" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page navigation example" aria-current="page" href="/add-project">Add Project</a>
+              </li>
+            </ul>
+            <a href="/contact" class="btn btn-dark text-white px-3" type="submit">Contact Me</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br />
+    <div class="container">
+
+      <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h2>Hai WELCOME TO MY HUT</h2>
+              <p class="text1">
+                A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image. As you can
+                see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no
+                tangible information at. It simply takes up space and should not really be read. And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content.
+                A joke, perhaps. Unfortunately, there's none of that here.
+              </p>
+              <a href="#" class="btn btn-dark px-3">Contact</a><span> Donwload CV <img src="/assets/images/download.png" width="30px" /></span><br /><br />
+              <h5>Found Me On</h5>
+              <div class="social-media">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-linkedin"></i>
+              </div>
+            </div>
+
+            <div class="col-4 text-center px-5">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem">
+                <img src="/assets/images/budi.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-center">Budi Aprisal</h5>
+                  <p class="card-text">FULLSTACK DEVELOPER</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center">MY PROJECT</h2>
+{{isLogin}}
+      <div class="container">
+          {{! pembuka tag }}
+      <div class="col d-flex container w-100 tkp gap-3 flex-wrap ">
+        {{#each dataBlog}}
+    <div class="card" style="width: 18rem;">
+    <img src="/assets/images/blog-img.png" class="card-img-top" alt="...">
+    <div class="card-body">
+   <a href="/blog-detail/" style="text-decoration: none; color: black;">{{this.name}}</a><br>
+      {{start_date}} | {{end_date}}
+
+      <p>
+        {{this.author}}
+      </p>
+      
+        
+      <p class="card-text">{{this.deskripsi}}.</p>
+   
+ 
+    <p>{{this.post_at}}</p>
+
+    <p>{{this.duration}}</p>
+   
+   <div class="iku">
+         
+  
+      <i class="fa-brands fa-{{technologies}}"></i>
+       <i class="fa-brands fa-{{this}}"></i>
+        
+   </div>
+    <div class="card-body">
+    <a href="/edit-blog/{{@index}}" class="btn btn-dark text-white px-4" class="card-link">Edit</a>
+  
+<button type="button" class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Delete
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5> DELETE BLOG
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Anda Yakin Mau Menghapus !!!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <a href="/delete-blog/{{@index}}" class="btn btn-dark text-white " class="card-link" >Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+        {{/each}}
+        {{! penutup tag }}
+
+      </div>
+
+   
+
+  </body>
+</html>

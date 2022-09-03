@@ -1,0 +1,73 @@
+.text-orange {
+  color: orangered !important;
+}
+
+.bg-orange {
+  background-color: orangered !important;
+}
+nav {
+  height: 7vh;
+}
+.container-fluid {
+  height: 93vh; /* tinggi  */
+}
+
+.container-form {
+  width: 500px; /* lebar  */
+  height: 400px;
+}
+
+.label.form-check-label {
+  padding: "80px 25px";
+}
+.element.style {
+  padding: "80px";
+}
+
+.container {
+  padding: 50px;
+}
+
+.card {
+  text-align: center;
+}
+
+.social-media {
+  font-size: 60px;
+}
+.card-text {
+  text-align: justify;
+}
+
+form {
+  margin: 90px auto;
+  width: 350px;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+form input,
+select,
+textarea {
+  width: 50%;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: rgb(231, 231, 231);
+  border-radius: 5px;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.tkp {
+  width: 100%;
+  padding-left: 100px;
+  background-color: red !important;
+}
+
+.iku {
+  font-size: 40px;
+  size: 40px;
+}
